@@ -1,7 +1,11 @@
 class Solution:
     def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:
-        left,right = ListNode(), ListNode()
+        """these are dummy list nodes, NOT LINKED LISTS"""
+        left,right = ListNode(), ListNode() 
+        #here we are choosing this to point 
         ltail, rtail = left,right
+
+
         while head:
             if head.val < x:
                 ltail.next = head
@@ -12,7 +16,6 @@ class Solution:
 
             head = head.next
 
-        ltail.next = right.next = None
-        rtail.next = rtail.next
-
-        return ltail.next
+        ltail.next = right.next 
+        rtail.next = None
+        return left.next
