@@ -1,3 +1,5 @@
+#list1, list are heads
+
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         dummy = ListNode()
@@ -6,15 +8,12 @@ class Solution:
           #compare both till both are non NULL
         while list1 and list2:
             if list1.val < list2.val:
-                #here l1 since we are adding the listNode, not its value
+                
                 tail.next = list1
-                #here, we are breaking connections so elements in list1 keep moving forward
-                #this is how linkedList works
+                
 
                 """
-                The line list1 = list1.next is used to move the list1 pointer forward in the linked list. 
-                In a singly linked list, each node has a next attribute pointing to the next node in the list. 
-                When you set list1 to list1.next, you are essentially updating the list1 pointer to point to the next node in the list.
+                
 
 Here's what happens step by step:
 
@@ -30,6 +29,7 @@ By moving the list1 pointer forward, you ensure that you are comparing and proce
                 """
                 list1 = list1.next  # Move list1 pointer forward
             else:
+                #add the head itself and iterate head by list2.next
                 tail.next = list2
                 list2 = list2.next  # Move list2 pointer forward
 
@@ -39,5 +39,5 @@ By moving the list1 pointer forward, you ensure that you are comparing and proce
             tail.next = list1
         elif list2:
             tail.next = list2
-         #return head of dummy node
+         #return next of dummy node, now it has all the tail values
         return dummy.next  
