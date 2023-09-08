@@ -39,5 +39,5 @@ By moving the list1 pointer forward, you ensure that you are comparing and proce
             tail.next = list1
         elif list2:
             tail.next = list2
-         #return next of dummy node, now it has all the tail values
+        
         return dummy.next  
