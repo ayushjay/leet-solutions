@@ -10,9 +10,7 @@ class Solution:
             if list1.val < list2.val:
                 
                 tail.next = list1
-                
 
-   
                 list1 = list1.next  # Move list1 pointer forward
             else:
                 
