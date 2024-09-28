@@ -11,6 +11,7 @@ class CircularDoublyLinkedList:
         self.tail = None
         self.length = 0
 
+    # 1 value
     def constructor2(self, value):
         new_node = Node(value)
         new_node.next = new_node
