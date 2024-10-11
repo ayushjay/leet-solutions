@@ -19,9 +19,9 @@ class Stack:
     def __init__(self):
         self.LinkedList = LinkedList()
 
-    def __str__(self):
-        values = [str(x.value) for x in self.LinkedList]
-        return "\n".join(values)
+        def __str__(self):
+            values = [str(x.value) for x in self.LinkedList]
+            return "\n".join(values)
 
     def isEmpty(self):
         if self.LinkedList.head == None:
