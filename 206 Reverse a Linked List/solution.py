@@ -9,7 +9,7 @@ class Solution:
         # using two pointers
         while curr:
             nxt = curr.next
-            # main revrse
+            # main reverse
             curr.next = prev
             prev = curr
             curr = nxt
