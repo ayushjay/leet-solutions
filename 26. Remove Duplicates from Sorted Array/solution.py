@@ -1,6 +1,6 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        # used two pointers, which are indexes startinmg from index 1,
+        # used two pointers, which are indexes starting from index 1,
         # first unique value will be in first position!
         l = 1
 
