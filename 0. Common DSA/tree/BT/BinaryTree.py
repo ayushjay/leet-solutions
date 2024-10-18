@@ -44,8 +44,12 @@ def levelOrderTraversal(rootNode):
         customQueue = queue.Queue()
         customQueue.enqueue(rootNode)
         while not(customQueue.isEmpty()):
+            # here root is current node
             root = customQueue.dequeue()
             print(root.value.data)
+
+            # If the current node has a left child, that left child is enqueued to be visited later.
+            # Similarly, if the current node has a right child, it is also enqueued.
             if (root.value.leftChild is not None):
                 customQueue.enqueue(root.value.leftChild)
             
