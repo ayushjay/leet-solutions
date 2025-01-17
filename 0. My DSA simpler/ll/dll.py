@@ -14,6 +14,7 @@ class LinkedList:
         self.head.next = self.tail
         self.tail.prev = self.head
     
+    # This method inserts a new node at the front of the list (right after the dummy head node).
     def insertFront(self, val):
         newNode = ListNode(val)
         newNode.prev = self.head
@@ -22,6 +23,7 @@ class LinkedList:
         self.head.next.prev = newNode
         self.head.next = newNode
 
+    # This method inserts a new node at the end of the list (right before the dummy tail node).
     def insertEnd(self, val):
         newNode = ListNode(val)
         newNode.next = self.tail
@@ -46,3 +48,14 @@ class LinkedList:
             print(curr.val, " -> ")
             curr = curr.next
         print()
+
+
+"""
+dll = LinkedList()
+
+dll.insertFront(10)  # List: [10]
+dll.insertFront(20)  # List: [20, 10]
+dll.insertEnd(30)    # List: [20, 10, 30]
+dll.insertEnd(40)    # List: [20, 10, 30, 40]
+# This results in a list that can be traversed in both directions, starting from dll.head.next (first node) to dll.tail.prev (last node).
+"""
