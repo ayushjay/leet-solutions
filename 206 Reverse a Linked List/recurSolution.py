@@ -22,9 +22,7 @@ class Solution:
 Dry Run Example
 Let's take an example linked list:
 
-rust
-Copy
-Edit
+
 1 -> 2 -> 3 -> 4 -> 5 -> None
 Recursive Breakdown:
 reverseList(1)
