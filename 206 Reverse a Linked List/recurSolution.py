@@ -68,8 +68,6 @@ head.next = 2
 1.next = None
 Return newHead = 5
 Final Reversed List:
-rust
-Copy
-Edit
+
 5 -> 4 -> 3 -> 2 -> 1 -> None
 """
