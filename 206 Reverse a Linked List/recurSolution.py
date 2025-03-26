@@ -17,7 +17,7 @@ class Solution:
         head.next.next = head
         head.next = None
         
-        return new_head
+        return new_head #Every time, a new_head is being returned, final one is reversed one
  
 # -----------------------------------
 # DRY RUN FOR INPUT: 1 -> 2 -> 3 -> 4
