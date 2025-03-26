@@ -6,7 +6,7 @@
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         
-        # Base case: if head is None or only one node, return head
+        # Base case: if head is None or only one node, return head. NOTICE THE OR
         if not head or not head.next:
             return head
         
