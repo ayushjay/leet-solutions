@@ -13,6 +13,8 @@ class LinkedList:
         self.tail = ListNode(-1)
         self.head.next = self.tail
         self.tail.prev = self.head
+
+        # head (-1) <--> tail (-1)
     
     # This method inserts a new node at the front of the list (right after the dummy head node).
     def insertFront(self, val):
@@ -42,6 +44,7 @@ class LinkedList:
         self.tail.prev.prev.next = self.tail
         self.tail.prev = self.tail.prev.prev
 
+    # note how we purposely avoid the dummy head and tail
     def print(self):
         curr = self.head.next
         while curr != self.tail:
