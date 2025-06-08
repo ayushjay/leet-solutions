@@ -58,4 +58,22 @@ dll.insertFront(20)  # List: [20, 10]
 dll.insertEnd(30)    # List: [20, 10, 30]
 dll.insertEnd(40)    # List: [20, 10, 30, 40]
 # This results in a list that can be traversed in both directions, starting from dll.head.next (first node) to dll.tail.prev (last node).
+
+ Purpose of Dummy Nodes:
+Dummy head and dummy tail are not part of the actual data.
+
+They are helpers to make operations like insert and delete easier.
+
+You never store real values in them (just -1 as placeholder).
+
+Visual Structure After Initialization:
+
+head (-1) <--> tail (-1)
+So:
+
+head.next points to tail
+
+tail.prev points back to head
+
+This gives you an empty doubly linked list sandwiched between two dummy nodes.
 """
