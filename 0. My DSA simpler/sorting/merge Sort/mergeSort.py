@@ -1,5 +1,6 @@
 # Implementation of MergeSort
 def mergeSort(arr, s, e):
+    # here we count length of array, and if it is equal to one
     if e - s + 1 <= 1:
         return arr
 
@@ -46,3 +47,6 @@ def merge(arr, s, m, e):
         arr[k] = R[j]
         j += 1
         k += 1
+
+my_arr = [1,5,2,3,6,8733,0,23,55555]
+print(mergeSort(my_arr,0, len(my_arr) - 1))
